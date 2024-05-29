@@ -1,6 +1,315 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>lulwrap</title>
+    <style>
+        body {
+            background-color: rgb(25, 25, 25);
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .function-list {
+            margin: 20px;
+        }
+        .function-item {
+            margin-bottom: 15px;
+        }
+        .function-item b {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
 <body>
-    <p>test</p>
+    <div class="function-list">
+        <div class="function-item">
+            <b>Total UNC (WIP) : 53%</b>
+            <p><br></p>
+            <p>------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+            <p><br></p>
+
+            <b>isreadonly</b>
+            <p>- Returns if a object is read only or not</p>
+            <p>- Usage example : isreadonly(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>cleardrawcache</b>
+            <p>- Clears all objects drawn onto the screen by the Drawing libary</p>
+            <p>- Usage example : cleardrawcache()</p>
+            <p>- Takes (0) arguments</p>
+            <p><br></p>
+
+            <b>identifyexecutor</b>
+            <p>- Returns executor name</p>
+            <p>- Usage example : identifyexecutor()</p>
+            <p>- Takes (0) arguments</p>
+            <p><br></p>
+
+            <b>getexecutorname</b>
+            <p>- Returns executor name</p>
+            <p>- Usage example : getexecutorname()</p>
+            <p>- Takes (0) arguments</p>
+            <p><br></p>
+            
+            <b>getidentity/getthreadcontext/getthreadidentity</b>
+            <p>- Returns script thread identity</p>
+            <p>- Usage example : getidentity()</p>
+            <p>- Takes (0) arguments</p>
+            <p><br></p>
+            
+            <b>setrenderproperty</b>
+            <p>- Sets a render property</p>
+            <p>- Usage example : setrenderproperty(argument,argument,argument)</p>
+            <p>- Takes (3) arguments</p>
+            <p><br></p>
+
+            <b>getrenderproperty</b>
+            <p>- Gets a render property</p>
+            <p>- Usage example : setrenderproperty(argument,argument)</p>
+            <p>- Takes (2) arguments</p>
+            <p><br></p>
+            
+            <b>getscriptclosure</b>
+            <p>- Returns the scripts closure</p>
+            <p>- Usage example : getscriptclosure()</p>
+            <p>- Takes (0) arguments</p>
+            <p><br></p>
+            
+            <b>getgenv</b>
+            <p>- Returns the scripts enviroment</p>
+            <p>- Usage example : getgenv(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>newcclosure</b>
+            <p>- Creates a new closure for a function</p>
+            <p>- Usage example : newcclosure(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>iscclosure</b>
+            <p>- Returns if something is a closure or not</p>
+            <p>- Usage example : iscclosure(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>isexecutorclosure</b>
+            <p>- Returns if something is a executor closure or not</p>
+            <p>- Usage example : isexecutorclosure(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>islclosure</b>
+            <p>- Returns if something is a closure or not</p>
+            <p>- Usage example : islclosure(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>getloadedmodules</b>
+            <p>- Returns all loaded modules</p>
+            <p>- Usage example : getloadedmodules()</p>
+            <p>- Takes (0) arguments</p>
+            <p><br></p>
+
+            <b>dofile/loadfile</b>
+            <p>- Runs what is in the given file</p>
+            <p>- Usage example : loadfile(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+            
+            <b>getscripthash</b>
+            <p>- Returns a scripts hash</p>
+            <p>- Usage example : getscripthash(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+            
+            <b>clonefunction</b>
+            <p>- Clones the function, and returns the new</p>
+            <p>- Usage example : clonefunction(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>firetouchinterest</b>
+            <p>- Fires roblox touchinterests (WIP)</p>
+            <p>- Usage example : firetouchinterest(argument, argument, argument)</p>
+            <p>- Takes (3) arguments</p>
+            <p><br></p>
+            
+            <b>fireproximityprompt</b>
+            <p>- Fires a proximityprompt (Must be displayed on the users screen)</p>
+            <p>- Usage example : fireproximityprompt(argument, argument)</p>
+            <p>- Takes (2) arguments</p>
+            <p><br></p>
+
+            <b>fireclickdetector</b>
+            <p>- Fires a clickdetector (Must be displayed on the users screen)</p>
+            <p>- Usage example : fireclickdetector(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+            
+            <b>mouse1click</b>
+            <p>- Clicks on the X and Y pixel given on the users screen</p>
+            <p>- Usage example : mouse1click(argument, argument)</p>
+            <p>- Takes (2) arguments</p>
+            <p><br></p>
+            
+            <b>mouse1press</b>
+            <p>- Presses down on the X and Y pixel given on the users screen</p>
+            <p>- Usage example : mouse1press(argument, argument)</p>
+            <p>- Takes (2) arguments</p>
+            <p><br></p>
+
+            <b>mouse1release</b>
+            <p>- Releases the mouse 1 button</p>
+            <p>- Usage example : mouse1release()</p>
+            <p>- Takes (0) arguments</p>
+            <p><br></p>
+            
+            <b>mousemoverel</b>
+            <p>- Move the players mouse to a location</p>
+            <p>- Usage example : mousemoverel(argument, argument)</p>
+            <p>- Takes (2) arguments</p>
+            <p><br></p>
+            
+            <b>ClickButton</b>
+            <p>- Clicks on a gui button given</p>
+            <p>- Usage example : mousemoverel(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>game.HttpGet</b>
+            <p>- Makes a HTTP get request and returns it</p>
+            <p>- Usage example : game.HttpGet(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>game.HttpGetAsync</b>
+            <p>- Makes a HTTP get request but awaits for a response and returns it</p>
+            <p>- Usage example : game.HttpGet(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+            
+            <b>gethui</b>
+            <p>- Returns a "safe" area for a gui to load</p>
+            <p>- Usage example : gathui()</p>
+            <p>- Takes (0) arguments</p>
+            <p><br></p>
+            
+            <b>loadstring</b>
+            <p>- Returns a function of a string you input</p>
+            <p>- Usage example : loadstring(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+            
+            <b>writefile</b>
+            <p>- Writes to a file</p>
+            <p>- Usage example : writefile(argument, argument)</p>
+            <p>- Takes (2) arguments</p>
+            <p><br></p>
+            
+            <b>readfile</b>
+            <p>- Returns what is in a file</p>
+            <p>- Usage example : readfile(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>appendfile</b>
+            <p>- Writes to a file, but on a new line</p>
+            <p>- Usage example : appendfile(argument,argument)</p>
+            <p>- Takes (2) arguments</p>
+            <p><br></p>
+            
+            <b>listfiles</b>
+            <p>- Returns a table of files in a directory</p>
+            <p>- Usage example : listfiles(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+            
+            <b>makefolder</b>
+            <p>- Makes a directory</p>
+            <p>- Usage example : makefolder(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+            
+            <b>delfolder</b>
+            <p>- Deletes a directory</p>
+            <p>- Usage example : delfolder(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+            
+            <b>isfolder</b>
+            <p>- Returns if something is a folder or not</p>
+            <p>- Usage example : isfolder(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>isfile</b>
+            <p>- Returns if something is a file or not</p>
+            <p>- Usage example : isfile(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>setclipboard/setrbxclipboard/toclipboard</b>
+            <p>- Copies something to the users clipboard</p>
+            <p>- Usage example : setclipboard(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>getinstances</b>
+            <p>- Returns all instances in a game</p>
+            <p>- Usage example : getinstances(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+            
+            <b>getnilinstances</b>
+            <p>- Returns all nil instances in a game</p>
+            <p>- Usage example : getnilinstances(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>getscripts</b>
+            <p>- Returns all scripts in a game</p>
+            <p>- Usage example : getscripts(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>isnetworkowner</b>
+            <p>- Returns if the user has network ownership over a instance</p>
+            <p>- Usage example : isnetworkowner(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+            
+            <b>isrbxactive</b>
+            <p>- Returns if the user is tabbed into roblox or not</p>
+            <p>- Usage example : isrbxactive(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>compareinstances</b>
+            <p>- Returns true if two instances are alike</p>
+            <p>- Usage example : compareinstances(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+
+            <b>setthreadidentity</b>
+            <p>- Sets the current thread identity</p>
+            <p>- Usage example : setthreadidentity(argument)</p>
+            <p>- Takes (1) arguments</p>
+            <p><br></p>
+            
+            <b>getrunningscripts</b>
+            <p>- Returns all scripts in the game that are running</p>
+            <p>- Usage example : getrunningscripts()</p>
+            <p>- Takes (0) arguments</p>
+            <p><br></p>
+
+
+            <b>Drawing functions coming soon...</b>
+            <b>Crypt libary coming soon...</b>
+            <p><br></p>
+        </div>
+    </div>
 </body>
 </html>
